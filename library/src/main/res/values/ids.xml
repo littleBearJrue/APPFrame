@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2015 Meizu Technology Co., Ltd.
+  ~ All rights reserved.
+  -->
+<resources>
+    <item name="listItemTopImageView" type="id"/>
+    <item name="listItemTopTextView" type="id"/>
+    <item name="listItemBottomImageView" type="id"/>
+    <item name="listItemBottomTextView" type="id"/>
+    <item name="listItemStartImageView" type="id"/>
+    <item name="listItemStartTextView" type="id"/>
+    <item name="listItemEndImageView" type="id"/>
+    <item name="listItemEndTextView" type="id"/>
+    <item name="listItemCheckBox" type="id"/>
+    <item name="listItemEndLayout" type="id"/>
+    <item name="listTagHolder" type="id"/>
+    <item name="listTagExpanded" type="id"/>
+    <item name="stickyLayout" type="id"/>
+    <item name="stickyHeader" type="id"/>
+    <item name="stickyContent" type="id"/>
+    <item name="tabItemTextView" type="id"/>
+    <item name="tabItemImageView" type="id"/>
+    <item name="np__increment" type="id" />
+    <item name="np__decrement" type="id" />
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2015 Meizu Technology Co., Ltd.
+  ~ All rights reserved.
+  -->
+<TextView android:id="@+id/widgetTitleTextView"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:ellipsize="middle"
+          android:gravity="center"
+          android:singleLine="true"
+          android:textColor="@color/title_bar_text_color"
+          android:textSize="@dimen/title_bar_text_size_button"/>

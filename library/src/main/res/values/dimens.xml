@@ -1,5 +1,141 @@
 <resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="list_item_height">64dp</dimen>
+    <dimen name="list_item_height_min">68dp</dimen>
+    <dimen name="list_item_height_max">80dp</dimen>
+    <dimen name="list_item_text_size_start">18sp</dimen>
+    <dimen name="list_item_text_size_end">12sp</dimen>
+    <dimen name="list_item_text_size_top">16sp</dimen>
+    <dimen name="list_item_text_size_bottom">14sp</dimen>
+    <dimen name="list_item_gap_x">9dp</dimen>
+    <dimen name="list_item_gap_y">3.5dp</dimen>
+    <dimen name="list_item_padding_horizontal">19dp</dimen>
+    <dimen name="list_item_padding_vertical">5dp</dimen>
+    <dimen name="list_item_padding_top">15dp</dimen>
+    <dimen name="list_item_padding_bottom">15dp</dimen>
+    <dimen name="list_item_divider_height">0.5dp</dimen>
+    <dimen name="title_bar_height_content">49dp</dimen>
+    <dimen name="title_bar_height_divider">1dp</dimen>
+    <dimen name="title_bar_text_size_title">18sp</dimen>
+    <dimen name="title_bar_text_size_button">14sp</dimen>
+    <dimen name="title_bar_button_width_min">54dp</dimen>
+    <dimen name="bottom_bar_text">14sp</dimen>
+    <dimen name="bottom_bar_height">60dp</dimen>
+    <dimen name="bottom_bar_divider_padding">12dp</dimen>
+    <dimen name="bottom_bar_small_margin_top">2dp</dimen>
+
+    <!-- button -->
+    <dimen name="button_left_margin">20dip</dimen>
+    <dimen name="button_right_margin">20dip</dimen>
+    <dimen name="button_top_margin">10dip</dimen>
+    <dimen name="button_bottom_margin">10dip</dimen>
+    <dimen name="button_width">10dip</dimen>
+    <dimen name="button_height">40dip</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+    <!-- dialog-->
+    <dimen name="dialog_common_bottom_height">400dp</dimen>
+    <dimen name="dialog_common_bottom_height_mid">300dp</dimen>
+    <dimen name="dialog_common_bottom_height_small">200dp</dimen>
+    <dimen name="dialog_common_bottom_margin">15dp</dimen>
+    <dimen name="dialog_common_bottom_margin_bottom">10dp</dimen>
+    <dimen name="dialog_common_bottom_margin_top">20dp</dimen>
+    <dimen name="dialog_common_bottom_margin_left">15dp</dimen>
+    <dimen name="dialog_common_bottom_margin_right">15dp</dimen>
+    <dimen name="dialog_common_bottom_text_title_size">18sp</dimen>
+    <dimen name="dialog_common_bottom_text_prompt_size">15sp</dimen>
+    <!--细线-->
+    <dimen name="router_divider_line_1px_height">1px</dimen>
+    <dimen name="router_divider_line_3px_height">3px</dimen>
+    <dimen name="router_divider_line_0dp_width">0dp</dimen>
+    <dimen name="router_divider_line_1dp_height">1dp</dimen>
+    <!-- 弹出框-->
+    <dimen name="popup_btn_text_size">16sp</dimen>
+    <dimen name="popup_title_size">16sp</dimen>
+    <dimen name="popup_title_size_small">14sp</dimen>
+    <dimen name="popup_title_size_big">18sp</dimen>
+    <dimen name="popup_context_size">14sp</dimen>
+    <dimen name="popup_prompt_text_size">12sp</dimen>
+    <dimen name="popup_edit_text_size">16sp</dimen>
+    <dimen name="popup_text_size">16sp</dimen>
+    <dimen name="popup_title_margin_bottom">5dip</dimen>
+    <dimen name="popup_margin_top">20dip</dimen>
+    <dimen name="popup_margin_left">10dip</dimen>
+    <dimen name="popup_margin_right">10dip</dimen>
+    <dimen name="popup_margin_big_bottom">20dip</dimen>
+    <dimen name="popup_margin_bottom">10dip</dimen>
+    <dimen name="popup_margin_small_bottom">5dip</dimen>
+    <dimen name="popup_btn_height">50dip</dimen>
+    <dimen name="popup_text_margin_top">10dip</dimen>
+    <dimen name="popup_padding_left">30dip</dimen>
+    <dimen name="popup_padding_right">30dip</dimen>
+    <dimen name="popup_padding_top">15dp</dimen>
+    <dimen name="popup_padding_bottom">15dp</dimen>
+    <dimen name="popup_btn_margin_top">8dp</dimen>
+
+    <dimen name="popup_seekbar_height">30dp</dimen>
+    <dimen name="popup_seekbar_margin_top">10dp</dimen>
+    <dimen name="popup_seekbar_max_height">5dp</dimen>
+    <dimen name="popup_seekbar_min_height">5dp</dimen>
+    <dimen name="popup_seekbar_thumb_offset">10dp</dimen>
+    <dimen name="popup_seekbar_padding_left">15dp</dimen>
+    <dimen name="popup_seekbar_padding_right">15dp</dimen>
+    <dimen name="popup_seekbar_padding_top">3dp</dimen>
+    <dimen name="popup_seekbar_padding_bottom">3dp</dimen>
+
+    <dimen name="popup_sub_title_text_size">16sp</dimen>
+    <!--通用设置条目-->
+    <dimen name="common_settings_icon_margin_left">4dp</dimen>
+    <dimen name="common_settings_icon_margin_right">5dp</dimen>
+    <dimen name="common_settings_text_size">16sp</dimen>
+    <dimen name="common_settings_text_small_size">12sp</dimen>
+    <!-- Common -->
+    <dimen name="header_icon_width">58dp</dimen>
+    <dimen name="header_padding_short">28dp</dimen>
+    <dimen name="header_height_short">72dp</dimen>
+    <dimen name="header_height_normal">152dp</dimen>
+    <dimen name="list_item_height_short">22dp</dimen>
+    <dimen name="list_item_height_normal">64dp</dimen>
+    <dimen name="list_item_height_expanded">44dp</dimen>
+    <dimen name="list_item_height_tall">80dp</dimen>
+    <dimen name="edit_height">264dp</dimen>
+    <dimen name="edit_margin_top">20dp</dimen>
+    <dimen name="edit_minHeight">40dp</dimen>
+    <dimen name="edit_padding_right">10dp</dimen>
+    <dimen name="edit_padding_left">10dp</dimen>
+    <dimen name="edit_text_size">15sp</dimen>
+    <!-- font sizes -->
+    <dimen name="font_huge">28sp</dimen>
+    <dimen name="font_larger">24sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_normaler">18sp</dimen>
+    <dimen name="font_normal">16sp</dimen>
+    <dimen name="font_small">14sp</dimen>
+    <dimen name="font_smaller">12sp</dimen>
+    <dimen name="font_tinyer">10sp</dimen>
+    <dimen name="font_tiny">8sp</dimen>
+    <!-- typical spacing between two views -->
+    <dimen name="spacing_horizontal_huge">40dp</dimen>
+    <dimen name="spacing_horizontal_large">20dp</dimen>
+    <dimen name="spacing_horizontal_normal">14dp</dimen>
+    <dimen name="spacing_horizontal_small">10dp</dimen>
+    <dimen name="spacing_horizontal_tiny">4dp</dimen>
+    <dimen name="spacing_vertical_huge">16dp</dimen>
+    <dimen name="spacing_vertical_large">12dp</dimen>
+    <dimen name="spacing_vertical_normal">5dp</dimen>
+    <dimen name="spacing_vertical_small">4dp</dimen>
+    <dimen name="spacing_vertical_tiny">1dp</dimen>
+    <dimen name="spacing_zero">0dp</dimen>
+
+    <!--加载更多-->
+    <dimen name="xlistview_footer_text_size">14sp</dimen>
+
+    <dimen name="home_remote_bottomDialog_text_size">18sp</dimen>
+
+    <dimen name="picker_timer_padding">10dp</dimen>
+    <dimen name="picker_timer_margin_left_5dp">5dp</dimen>
+    <dimen name="picker_timer_margin_width">80dp</dimen>
+    <dimen name="picker_timer_width">100dp</dimen>
+    <dimen name="picker_timer_margin_height">160dp</dimen>
+    <dimen name="picker_timer_height">240dp</dimen>
+    <dimen name="picker_timer_margin_left_20dp">20dp</dimen>
+    <dimen name="picker_timer_text_size">26sp</dimen>
 </resources>

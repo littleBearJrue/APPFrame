@@ -10,6 +10,8 @@ android {
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
+
+        multiDexEnabled true // Enabling multidex support.
     }
     buildTypes {
         release {
@@ -20,8 +22,9 @@ android {
 }
 
 dependencies {
+    // Module dependency
+    compile project(path: ':library')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.2.1'
-    compile project(':library')
 }
