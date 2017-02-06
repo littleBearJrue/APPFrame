@@ -25,7 +25,7 @@ import butterknife.ButterKnife;
  * <p>
  * 子类一般需要重写{@code onLocalServiceChanged}方法，当服务发生变化时更新窗口显示。
  * 使用{@code getTitleBarLayout}获取标题栏。
- * Created by meizu on 17/2/5.
+ * Created by jrue on 17/2/5.
  */
 public class BaseFragment extends Fragment {
     private static final String TAG = "BaseFragment";

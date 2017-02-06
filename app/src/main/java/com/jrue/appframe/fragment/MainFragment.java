@@ -28,19 +28,25 @@ public class MainFragment extends BaseFragment {
     @Override
     public void mzOnViewCreated(View view) {
         super.mzOnViewCreated(view);
-        TitleBarLayout bar = getTitleBarLayout();
-        bar.setTitleBackground(TitleBarLayout.TITLE_BACKGROUND_WHITE);
-        bar.setVisibility(View.GONE);
     }
 
     @Override
     public void onResume() {
         super.onResume();
+
+        TitleBarLayout bar = getTitleBarLayout();
+        if (bar != null) {
+            bar.setTitleBackground(TitleBarLayout.TITLE_BACKGROUND_DARK_BLUE);
+            bar.setTitleGravity(TitleBarLayout.TITLE_GRAVITY_CENTER);
+            bar.setTitleText("首页");
+            bar.setVisibility(View.VISIBLE);
+            bar.setTitleEndButtonDrawable(getResources().getDrawable(R.drawable.ic_add_devices));
+            bar.setTitleEndButtonVisibility(View.VISIBLE);
+        }
     }
 
     @Override
     public void onPause() {
         super.onPause();
     }
-
 }

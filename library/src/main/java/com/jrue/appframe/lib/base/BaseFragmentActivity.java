@@ -20,7 +20,7 @@ import com.jrue.appframe.lib.widget.TitleBarLayout;
 
 /**
  *  Activity基类，只用于提供外部调用接口。
- * Created by meizu on 17/2/5.
+ * Created by jrue on 17/2/5.
  */
 public abstract class BaseFragmentActivity extends FragmentActivity {
     private static final String TAG = "BaseFragmentActivity";
