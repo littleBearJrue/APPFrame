@@ -21,4 +21,6 @@ public class MConst {
 
     public static final String VERSION_REGULAR = "(\\d+\\.)+\\d+";
 
+    public static final String DB_NAME = "provider.db";
+
 }

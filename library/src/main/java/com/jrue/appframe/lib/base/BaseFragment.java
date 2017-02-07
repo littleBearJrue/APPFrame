@@ -106,10 +106,20 @@ public class BaseFragment extends Fragment {
         super.onPause();
     }
 
+    /**
+     * 引入界面布局的方法
+     * @param inflater
+     * @param container
+     * @return
+     */
     protected View mzOnCreateView(LayoutInflater inflater, ViewGroup container) {
         return null;
     }
 
+    /**
+     * findViewById的方法
+     * @param view
+     */
     protected void mzOnViewCreated(View view) {
     }
 
