@@ -6,14 +6,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Third Layout"
-        android:id="@+id/third_layout"
-        android:layout_gravity="center_horizontal" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="To Next Fragment"
-        android:id="@+id/next_btn"
+        android:text="Next Layout"
+        android:id="@+id/next_text"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>

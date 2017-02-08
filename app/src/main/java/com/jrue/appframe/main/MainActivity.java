@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -13,6 +14,8 @@ import com.jrue.appframe.fragment.SecondFragment;
 import com.jrue.appframe.fragment.ThirdFragment;
 import com.jrue.appframe.lib.base.BaseFragment;
 import com.jrue.appframe.lib.base.BaseFragmentActivity;
+import com.jrue.appframe.lib.event.OnBackPressedCtrlEvent;
+import com.jrue.appframe.lib.util.MEvent;
 import com.jrue.appframe.lib.util.MUtils;
 import com.jrue.appframe.lib.widget.BottomBarView;
 
@@ -182,5 +185,14 @@ public class MainActivity extends BaseFragmentActivity implements BottomBarView.
             }
             return clazz.getSimpleName();
         }
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getRepeatCount() == 0) {
+            MEvent.post(new OnBackPressedCtrlEvent());
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

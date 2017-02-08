@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.jrue.appframe.R;
 import com.jrue.appframe.lib.base.BaseFragment;
+import com.jrue.appframe.lib.event.OnBackPressedCtrlEvent;
 import com.jrue.appframe.lib.widget.TitleBarLayout;
 
 /**
@@ -18,6 +20,7 @@ public class ThirdFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setAutoRegisterEvent(true);
     }
 
     @Override
@@ -28,6 +31,14 @@ public class ThirdFragment extends BaseFragment {
     @Override
     public void mzOnViewCreated(View view) {
         super.mzOnViewCreated(view);
+
+        Button nextBtn = (Button)view.findViewById(R.id.next_btn);
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addFragmentToBackStack(NextFragment.newInstance("这是下一个界面了！！！"));
+            }
+        });
 
     }
 
@@ -46,5 +57,9 @@ public class ThirdFragment extends BaseFragment {
     @Override
     public void onPause() {
         super.onPause();
+    }
+
+    public void onEvent(OnBackPressedCtrlEvent event) {
+        getBaseActivity().mzFinish();
     }
 }

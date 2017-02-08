@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.jrue.appframe.R;
 import com.jrue.appframe.lib.base.BaseFragment;
+import com.jrue.appframe.lib.event.OnBackPressedCtrlEvent;
 import com.jrue.appframe.lib.widget.TitleBarLayout;
 
 /**
@@ -17,6 +18,7 @@ public class SecondFragment extends BaseFragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setAutoRegisterEvent(true);
     }
 
     @Override
@@ -45,5 +47,9 @@ public class SecondFragment extends BaseFragment{
     @Override
     public void onPause() {
         super.onPause();
+    }
+
+    public void onEvent(OnBackPressedCtrlEvent event) {
+        getBaseActivity().mzFinish();
     }
 }
