@@ -182,4 +182,34 @@
         <!-- 显示数字的个数-->
         <attr name="numberSelectorWheelItemCount" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="AnalogClockAdjust">
+        <attr name="dial" format="reference" />
+        <attr name="hand_hour" format="reference" />
+        <attr name="hand_minute" format="reference" />
+        <attr name="hand_minute_sel" format="reference" />
+        <attr name="hand_hour_sel" format="reference" />
+        <attr name="touch_unsel" format="reference" />
+        <attr name="touch_sel" format="reference" />
+        <attr name="touch_pressed" format="reference" />
+        <attr name="clock_center" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="AnalogClock">
+        <attr name="dial2" format="reference" />
+        <attr name="hand_hour2" format="reference" />
+        <attr name="hand_minute2" format="reference" />
+        <attr name="hand_second" format="reference" />
+        <attr name="dial_gray" format="reference" />
+        <attr name="hand_hour_gray" format="reference" />
+        <attr name="hand_minute_gray" format="reference" />
+        <attr name="hand_second_gray" format="reference" />
+        <attr name="hand_hour_shadow" format="reference" />
+        <attr name="hand_minute_shadow" format="reference" />
+        <attr name="hand_second_shadow" format="reference" />
+        <attr name="clock_center2" format="reference" />
+        <attr name="clock_center_gray" format="reference" />
+        <!--        <attr name="clock_center_shadow" format="reference" />-->
+    </declare-styleable>
 </resources>

@@ -7,5 +7,15 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="AnalogClockAdjustStyle">
+        <item name="dial">@drawable/clock_adjust_dial</item>
+        <item name="hand_hour">@drawable/clock_adjust_hour</item>
+        <item name="hand_minute">@drawable/clock_adjust_minute</item>
+        <item name="hand_hour_sel">@drawable/clock_adjust_hour_sel</item>
+        <item name="hand_minute_sel">@drawable/clock_adjust_minute_sel</item>
+        <item name="touch_unsel">@drawable/clock_touch_unsel</item>
+        <item name="touch_sel">@drawable/clock_touch_sel</item>
+        <item name="touch_pressed">@drawable/clock_touch_pressed</item>
+        <item name="clock_center">@drawable/clock_adjust_center</item>
+    </style>
 </resources>

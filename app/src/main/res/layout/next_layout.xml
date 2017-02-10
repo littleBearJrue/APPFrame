@@ -9,4 +9,11 @@
         android:text="Next Layout"
         android:id="@+id/next_text"
         android:layout_gravity="center_horizontal" />
+
+    <com.jrue.appframe.lib.widget.AnalogClockAdjustView
+        android:id="@+id/adjust_time_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        style="@style/AnalogClockAdjustStyle"/>
 </LinearLayout>

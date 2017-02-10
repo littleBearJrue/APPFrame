@@ -56,7 +56,7 @@ public class NextFragment extends BaseFragment {
         super.onResume();
         TitleBarLayout bar = getTitleBarLayout();
         if (bar != null) {
-            bar.setTitleBackground(TitleBarLayout.TITLE_BACKGROUND_GRAY);
+            bar.setTitleBackground(TitleBarLayout.TITLE_BACKGROUND_DARK_BLUE);
             bar.setTitleGravity(TitleBarLayout.TITLE_GRAVITY_CENTER);
             bar.setTitleText("第四页");
             bar.setVisibility(View.VISIBLE);
