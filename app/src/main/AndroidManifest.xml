@@ -45,6 +45,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".main.TextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ActivityTheme" />
         <service
             android:name="com.jrue.appframe.service.LocalManagerService"
             android:enabled="true"

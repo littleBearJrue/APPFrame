@@ -1,6 +1,8 @@
 package com.jrue.appframe.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,9 @@ import com.jrue.appframe.R;
 import com.jrue.appframe.lib.base.BaseFragment;
 import com.jrue.appframe.lib.event.OnBackPressedCtrlEvent;
 import com.jrue.appframe.lib.widget.TitleBarLayout;
+import com.jrue.appframe.main.TextActivity;
+
+import java.util.ArrayList;
 
 /**
  * Created by jrue on 17/2/7.
@@ -36,7 +41,9 @@ public class ThirdFragment extends BaseFragment {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addFragmentToBackStack(NextFragment.newInstance("这是下一个界面了！！！"));
+                Intent intent = new Intent(getActivity(), TextActivity.class);
+                intent.putExtra("textActivity", "进入另一个Activity载体!");
+                startActivity(intent);
             }
         });
 

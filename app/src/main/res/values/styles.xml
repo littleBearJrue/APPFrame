@@ -1,5 +1,12 @@
 <resources>
 
+    <style name="ActivityTheme" parent="@style/AppTheme">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimateStyle</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+        <item name="numberPickerStyle">@style/TimePicker_Blue_Style</item>
+    </style>
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
