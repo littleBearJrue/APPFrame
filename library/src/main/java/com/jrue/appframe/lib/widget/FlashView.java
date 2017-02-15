@@ -36,7 +36,6 @@ public class FlashView extends View {
 
     private FlashCallBack callBack = null;
 
-
     public FlashView(Context context){
         super(context, null);
     }
@@ -56,16 +55,16 @@ public class FlashView extends View {
 
     }
     public void setCallBack(FlashCallBack callBack){
-        this.callBack=callBack;
+        this.callBack = callBack;
     }
 
     private void init(){
-        DisplayMetrics displayMetrics =getContext().getResources()
+        DisplayMetrics displayMetrics = getContext().getResources()
                 .getDisplayMetrics();
         int  width = displayMetrics.widthPixels;
-        mMinSize = width/600f;
-        mCenter = width/2;
-        mRadius = 160*mMinSize;
+        mMinSize = width / 600f;
+        mCenter = width / 2;
+        mRadius = 160 * mMinSize;
 
         mTextPaint = new Paint();
         mTextPaint.setColor(Color.WHITE);
@@ -75,7 +74,7 @@ public class FlashView extends View {
 
         mLinePaint = new Paint();
         mLinePaint.setColor(Color.WHITE);
-        mLinePaint.setStrokeWidth(mMinSize*4);
+        mLinePaint.setStrokeWidth(mMinSize * 4);
         mLinePaint.setStyle(Paint.Style.STROKE);
         mLinePaint.setAntiAlias(true);
 
@@ -83,13 +82,12 @@ public class FlashView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        double stopx = mCenter-mRadius*Math.cos(degree);
-        double stopy = mCenter-mRadius*Math.sin(degree);
-        canvas.drawLine(mCenter, mCenter, (float) stopx, (float) stopy, mLinePaint);
-
+        double stopX = mCenter - mRadius * Math.cos(degree);
+        double stopY = mCenter - mRadius * Math.sin(degree);
+        canvas.drawLine(mCenter, mCenter, (float) stopX, (float) stopY, mLinePaint);
         for (int i = 0; i < 7; i++){
-            canvas.drawText(mText[i], mCenter, mCenter + mRadius+50*mMinSize, mTextPaint);
-            canvas.rotate(51.428f,mCenter,mCenter);
+            canvas.drawText(mText[i], mCenter, mCenter + mRadius + 50 * mMinSize, mTextPaint);
+            canvas.rotate(51.428f, mCenter, mCenter);
         }
 
     }
@@ -98,14 +96,14 @@ public class FlashView extends View {
     public boolean onTouchEvent(MotionEvent event) {
         float x = event.getX();
         float y = event.getY();
-        degree = Math.atan2(mCenter-y,mCenter-x);
+        degree = Math.atan2(mCenter - y, mCenter - x);
         if(degree < 0){
-            degree = degree + 2*Math.PI;
+            degree = degree + 2 * Math.PI;
         }
         double distance = Math.sqrt((x - mCenter) * (x - mCenter) + (y - mCenter) * (y - mCenter));
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:{
-                if( distance > mRadius+50*mMinSize){
+                if( distance > mRadius + 50 * mMinSize){
                     return true;
                 }
                 invalidate();
@@ -135,17 +133,17 @@ public class FlashView extends View {
     }
 
     private void setDegree(double dg){
-        double d = dg+Math.PI/2;
-        int cout = (int)(d/Math.PI*180/51);
+        double d = dg + Math.PI / 2;
+        int count = (int)(d  /Math.PI * 180 / 51);
         if ((d / Math.PI * 180) % 51.428 > 51.428 / 2)
-            cout++;
-        d = cout*51.428;
+            count++;
+        d = count * 51.428;
         degree = d / 180 * Math.PI - Math.PI / 2;
 
         if (callBack != null){
-            if (cout > 7)
-                cout-=7;
-            callBack.update(cout);
+            if (count > 7)
+                count-=7;
+            callBack.update(count);
         }
     }
 }

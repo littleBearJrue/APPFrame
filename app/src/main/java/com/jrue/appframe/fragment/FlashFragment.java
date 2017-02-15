@@ -8,23 +8,24 @@ import android.widget.TextView;
 
 import com.jrue.appframe.R;
 import com.jrue.appframe.lib.base.BaseFragment;
-import com.jrue.appframe.lib.event.OnBackPressedCtrlEvent;
 import com.jrue.appframe.lib.widget.TitleBarLayout;
 
+import butterknife.Bind;
+
 /**
- * Created by jrue on 17/2/8.
+ * Created by jrue on 17/2/15.
  */
-public class NextFragment extends BaseFragment {
-    public static final String TAG = "NextFragment";
+public class FlashFragment extends BaseFragment {
+    public static final String TAG = "ClockFragment";
 
     static final String FROM_PRE_DATA = "pre_data";
 
     private String pre_str;
 
-    public static NextFragment newInstance(String fromPre) {
+    public static FlashFragment newInstance(String fromPre) {
         Bundle bundle = new Bundle();
         bundle.putString(FROM_PRE_DATA, fromPre);
-        NextFragment fragment = new NextFragment();
+        FlashFragment fragment = new FlashFragment();
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -32,22 +33,19 @@ public class NextFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setAutoRegisterEvent(true);
-
         Bundle bundle = getArguments();
         pre_str = bundle.getString(FROM_PRE_DATA);
-
     }
 
     @Override
     public View mzOnCreateView(LayoutInflater inflater, ViewGroup container) {
-        return inflater.inflate(R.layout.next_layout, container, false);
+        return inflater.inflate(R.layout.flash_layout, container, false);
     }
 
     @Override
     public void mzOnViewCreated(View view) {
         super.mzOnViewCreated(view);
-        TextView tv = (TextView)view.findViewById(R.id.next_text);
+        TextView tv = (TextView)view.findViewById(R.id.flash_text);
         tv.setText(pre_str);
     }
 
@@ -58,17 +56,8 @@ public class NextFragment extends BaseFragment {
         if (bar != null) {
             bar.setTitleBackground(TitleBarLayout.TITLE_BACKGROUND_DARK_BLUE);
             bar.setTitleGravity(TitleBarLayout.TITLE_GRAVITY_CENTER);
-            bar.setTitleText("第四页");
+            bar.setTitleText("Flash View");
             bar.setVisibility(View.VISIBLE);
         }
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
-
-    public void onEvent(OnBackPressedCtrlEvent event) {
-        getFragmentManager().popBackStack();
     }
 }
