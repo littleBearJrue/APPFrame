@@ -22,6 +22,9 @@ public class FlashFragment extends BaseFragment {
 
     private String pre_str;
 
+    @Bind(R.id.flash_text)
+    TextView flashText;
+
     public static FlashFragment newInstance(String fromPre) {
         Bundle bundle = new Bundle();
         bundle.putString(FROM_PRE_DATA, fromPre);
@@ -45,8 +48,7 @@ public class FlashFragment extends BaseFragment {
     @Override
     public void mzOnViewCreated(View view) {
         super.mzOnViewCreated(view);
-        TextView tv = (TextView)view.findViewById(R.id.flash_text);
-        tv.setText(pre_str);
+        flashText.setText(pre_str);
     }
 
     @Override

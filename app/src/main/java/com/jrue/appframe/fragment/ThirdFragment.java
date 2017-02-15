@@ -13,11 +13,17 @@ import com.jrue.appframe.lib.event.OnBackPressedCtrlEvent;
 import com.jrue.appframe.lib.widget.TitleBarLayout;
 import com.jrue.appframe.main.HomeCustomActivity;
 
+import butterknife.Bind;
+import butterknife.OnClick;
+
 /**
  * Created by jrue on 17/2/7.
  */
 public class ThirdFragment extends BaseFragment {
     public static final String TAG = "ThirdFragment";
+
+    @Bind(R.id.next_btn)
+    Button nextBtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,17 +39,6 @@ public class ThirdFragment extends BaseFragment {
     @Override
     public void mzOnViewCreated(View view) {
         super.mzOnViewCreated(view);
-
-        Button nextBtn = (Button)view.findViewById(R.id.next_btn);
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), HomeCustomActivity.class);
-                intent.putExtra("textActivity", "进入另一个Activity载体!");
-                startActivity(intent);
-            }
-        });
-
     }
 
     @Override
@@ -56,6 +51,13 @@ public class ThirdFragment extends BaseFragment {
             bar.setTitleText("第三页");
             bar.setVisibility(View.VISIBLE);
         }
+    }
+
+    @OnClick(R.id.next_btn)
+    void onNextClick() {
+        Intent intent = new Intent(getActivity(), HomeCustomActivity.class);
+        intent.putExtra("textActivity", "进入另一个Activity载体!");
+        startActivity(intent);
     }
 
     @Override

@@ -10,6 +10,8 @@ import com.jrue.appframe.R;
 import com.jrue.appframe.lib.base.BaseFragment;
 import com.jrue.appframe.lib.widget.TitleBarLayout;
 
+import butterknife.Bind;
+
 /**
  * Created by jrue on 17/2/8.
  */
@@ -19,6 +21,9 @@ public class ClockFragment extends BaseFragment {
     static final String FROM_PRE_DATA = "pre_data";
 
     private String pre_str;
+
+    @Bind(R.id.next_text)
+    TextView clockText;
 
     public static ClockFragment newInstance(String fromPre) {
         Bundle bundle = new Bundle();
@@ -43,8 +48,7 @@ public class ClockFragment extends BaseFragment {
     @Override
     public void mzOnViewCreated(View view) {
         super.mzOnViewCreated(view);
-        TextView tv = (TextView)view.findViewById(R.id.next_text);
-        tv.setText(pre_str);
+        clockText.setText(pre_str);
     }
 
     @Override

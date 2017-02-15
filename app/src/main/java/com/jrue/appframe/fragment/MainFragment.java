@@ -13,12 +13,20 @@ import com.jrue.appframe.lib.event.OnBackPressedCtrlEvent;
 import com.jrue.appframe.lib.util.MSetting;
 import com.jrue.appframe.lib.widget.TitleBarLayout;
 
+import butterknife.Bind;
+import butterknife.OnClick;
+
 /**
  * Created by jrue on 17/2/5.
  */
 public class MainFragment extends BaseFragment {
 
     public static final String TAG = "MainFragment";
+
+    @Bind(R.id.useBtn)
+    Button useBtn;
+    @Bind(R.id.textView)
+    TextView text;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,17 +42,9 @@ public class MainFragment extends BaseFragment {
     @Override
     public void mzOnViewCreated(View view) {
         super.mzOnViewCreated(view);
-
-        Button btn = (Button) view.findViewById(R.id.useBtn);
-        TextView tv = (TextView) view.findViewById(R.id.textView);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MSetting.getInstance().setFirstUse(true);
-            }
-        });
+        text = (TextView) view.findViewById(R.id.textView);
         if (MSetting.getInstance().getFirstUse()) {
-            tv.setText("欢迎第一次使用！");
+            text.setText("欢迎第一次使用！");
         }
 
     }
@@ -60,6 +60,11 @@ public class MainFragment extends BaseFragment {
             bar.setTitleText("首页");
             bar.setVisibility(View.VISIBLE);
         }
+    }
+
+    @OnClick(R.id.useBtn)
+    void onUseClick() {
+        MSetting.getInstance().setFirstUse(true);
     }
 
     @Override
